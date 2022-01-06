@@ -1,0 +1,110 @@
+html{
+    font-size: 62.5%; /* 16px -(default size for browser) * 62.5% = 10px = 1rem */
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    height: 100vh;
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Layout */
+
+.grid-container{
+    display: grid;
+    grid-template-areas:
+    'header'
+    'main'
+    'footer';
+    grid-template-columns: 2fr;
+    grid-template-rows: 8rem 2fr 6rem;
+    height: 100%;
+}
+header{
+    grid-area: header;
+    background-color: rgb(56, 56, 56);
+}
+
+main{
+    grid-area: main;
+    padding: 1rem;
+}
+
+footer{
+    grid-area: footer;
+    background-color: rgb(51, 51, 51);
+    color: aliceblue;
+}
+/* Common section */
+h1{
+    font-size: 1.8rem;
+    padding: 1rem 0;
+}
+a{
+    text-decoration: none;
+    color: rgb(214, 146, 83);
+}
+a:hover{
+    color:rgb(166, 248, 173) ;
+}
+
+/* Header Section */
+header a{
+    padding: 10px;
+}
+a.brand{
+    font-weight: bold;
+    font-size: 5rem;
+    text-transform: capitalize;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+
+/* Footer Section */
+
+.row.foot{
+    justify-content: center;
+}
+
+/* images */
+
+img{
+    border-radius: 0.2rem;
+}
+img.medium{
+    max-width: 28rem;
+    width: 100%;
+}
+/* Card */
+
+.card{
+    border: 0.2rem solid rgb(247, 223, 180);
+    border-radius: 0.8rem;
+    margin: 1rem;
+}
+
+.card-body{
+    padding: 1rem;
+}
+
+.card-body > *{      /*It means all direct child of card-body*/
+    margin: 0.5rem;
+}
+.price{
+    font-size: 2rem;
+}
+
+/* Rating */
+
+.rating span{
+    color: gold;
+    margin: 0.1rem;
+}

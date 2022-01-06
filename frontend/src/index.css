@@ -1,0 +1,302 @@
+html {
+  font-size: 62.5%; /* 16px -(default size for browser) * 62.5% = 10px = 1rem */
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+}
+
+/* Layout */
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 2fr;
+  grid-template-rows: 8rem 2fr 6rem;
+  height: 100%;
+}
+header {
+  grid-area: header;
+  background-color: rgb(56, 56, 56);
+}
+
+main {
+  grid-area: main;
+  padding: 1rem;
+}
+
+footer {
+  grid-area: footer;
+  background-color: rgb(51, 51, 51);
+  color: aliceblue;
+}
+/* Common section */
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+a {
+  text-decoration: none;
+  color: rgb(214, 146, 83);
+}
+a:hover {
+  color: rgb(166, 248, 173);
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  margin-top: 1rem;
+}
+
+input,
+select,
+textarea,
+button {
+  padding: 1rem;
+  border-radius: 00.5rem;
+  border: 0.2rem rgb(173, 170, 170) solid;
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+button {
+  background-color: rgb(240, 234, 234);
+  cursor: pointer;
+}
+
+input:hover,
+select:hover,
+textarea:hover,
+button:hover {
+  border: 0.2rem black solid;
+}
+button.primary {
+  background-color: gold;
+}
+button.block {
+  width: 100%;
+}
+button.small{
+  font-size: 1.2rem;
+}
+/* Header Section */
+header a {
+  padding: 10px;
+}
+a.brand {
+  font-weight: bold;
+  font-size: 5rem;
+  text-transform: capitalize;
+}
+.badge {
+  background-color: red;
+  color: azure;
+  border-radius: 50%;
+  padding: 0.2rem 0.7rem;
+  font-size: 1.4rem;
+  margin-left: 0.2rem;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.row.center {
+  justify-content: center;
+}
+
+/* Footer Section */
+
+.row.foot {
+  justify-content: center;
+}
+
+.row.top {
+  align-items: flex-start;
+}
+.col-1 {
+  margin-left: 20px;
+  padding: 2px;
+  flex: 1 1 25rem;
+}
+.col-2 {
+  flex: 2 1 50rem;
+}
+.min-30 {
+  min-width: 30rem;
+}
+
+/* images */
+
+img {
+  border-radius: 0.5rem;
+}
+img.small {
+  max-width: 6rem;
+  width: 100%;
+}
+img.medium {
+  max-width: 29rem;
+  width: 100%;
+}
+img.large {
+  width: 100%;
+}
+
+/* Card */
+
+.card {
+  border: 0.2rem solid rgb(247, 223, 180);
+  border-radius: 0.8rem;
+  margin: 1rem;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-body > * {
+  /*It means all direct child of card-body*/
+  margin: 0.5rem;
+}
+.price {
+  font-size: 2rem;
+}
+
+/* Rating */
+
+.rating span {
+  color: gold;
+  margin: 0.1rem;
+}
+
+.rating span:last-child {
+  color: black;
+}
+
+/* Alert */
+.loading {
+  display: block !important;
+}
+
+.success {
+  color: rgba(100, 194, 6, 0.651);
+  font-weight: bold;
+}
+.danger {
+  color: crimson;
+  font-weight: bold;
+}
+
+.alert {
+  padding: 1rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+}
+
+.alert-info {
+  color: blue;
+  background-color: #e0e0ff;
+}
+.alert-danger {
+  color: rgb(167, 4, 4);
+  background-color: #f8bde5;
+}
+.alert-success {
+  color: rgb(3, 124, 23);
+  background-color: #a2eedd;
+}
+
+/* Form */
+
+.form {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+.form > div {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.form label {
+  margin: 1rem 0;
+  /* display: block; */
+}
+
+/* Dropdown */
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+.dropdown-content {
+  position: absolute;
+  display: none;
+  right: 0;
+  max-width: 15rem;
+  padding: 1rem;
+  z-index: 1;
+  background-color: black;
+  margin: 0;
+  margin-top: 0.4rem;
+  border-radius: 0.5rem;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  
+}
+
+/* Checkout Steps */
+
+.checkout-steps > div {
+  border-top: 0.3rem gray solid;
+  color: #bbbbc9a6;
+  flex: 1;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.checkout-steps > div.active {
+  border-top-color: crimson;
+  color: darkorange;
+}
+/* Table */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table tbody tr:nth-of-type(odd) {
+  background-color: #e8f7cc;
+}
+
+.table td,
+.table th {
+  text-align: left;
+  border: 0.1rem solid rgb(245, 203, 148);
+  padding: 0.5rem;
+}
+
+.table button {
+  margin: 0 0.2rem;
+}
