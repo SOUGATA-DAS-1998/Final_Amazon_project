@@ -8,7 +8,7 @@ const data = {
       price: 2199,
       countInStock: 10,
       brand: "Nike",
-      rating: 3.5,
+      rating: 4.5,
       numReviews: 10,
       description: "high quality product",
     },
